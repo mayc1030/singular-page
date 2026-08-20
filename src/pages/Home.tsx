@@ -469,7 +469,7 @@ export const Home: React.FC = () => {
           <div
             ref={productSliderRef}
             onScroll={handleProductScroll}
-            className="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth pb-3 px-1 -mx-4 px-4 touch-pan-x"
+            className="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth pb-3 px-1 -mx-4 px-4 overscroll-x-contain"
           >
             {PRODUCTS.map((p) => (
               <div
@@ -676,7 +676,7 @@ export const Home: React.FC = () => {
           <div
             ref={designSliderRef}
             onScroll={handleDesignScroll}
-            className="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth pb-3 px-1 -mx-4 px-4 touch-pan-x"
+            className="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth pb-3 px-1 -mx-4 px-4 overscroll-x-contain"
           >
             {popularDesigns.map((d) => (
               <div
@@ -793,7 +793,7 @@ export const Home: React.FC = () => {
           <div
             ref={techniqueSliderRef}
             onScroll={handleTechniqueScroll}
-            className="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth pb-3 px-1 -mx-4 px-4 touch-pan-x"
+            className="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth pb-3 px-1 -mx-4 px-4 overscroll-x-contain"
           >
             {PRINT_TECHNIQUES.slice(0, 3).map((tech) => (
               <div

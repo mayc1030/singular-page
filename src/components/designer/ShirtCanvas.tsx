@@ -161,6 +161,7 @@ export const ShirtCanvas = forwardRef<ShirtCanvasHandle, ShirtCanvasProps>(({
       width: canvasWidth,
       height: canvasHeight,
       preserveObjectStacking: true,
+      allowTouchScrolling: true,
       selectionColor: 'rgba(99, 102, 241, 0.15)',
       selectionBorderColor: '#6366f1',
       selectionLineWidth: 1
