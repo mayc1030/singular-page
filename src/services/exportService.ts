@@ -1,6 +1,7 @@
 import * as fabric from 'fabric';
 import type { Product } from '../types/product';
 import type { PrintSide } from '../types/order';
+import { getAssetUrl } from '../utils/imageUtils';
 
 export interface RenderMockupOptions {
   product: Product;
@@ -95,7 +96,8 @@ export const exportService = {
     width = 1000,
     height = 1100
   }: RenderMockupOptions): Promise<string | null> => {
-    const photoUrl = side === 'front' ? product.mockups.front : product.mockups.back;
+    const rawPhotoUrl = side === 'front' ? product.mockups.front : product.mockups.back;
+    const photoUrl = getAssetUrl(rawPhotoUrl);
 
     const canvas = document.createElement('canvas');
     canvas.width = width;

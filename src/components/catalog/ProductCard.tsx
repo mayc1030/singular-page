@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Product } from '../../types/product';
 import { formatCurrency } from '../../utils/priceUtils';
+import { getAssetUrl } from '../../utils/imageUtils';
 import { ArrowRight, Tag } from 'lucide-react';
 import { Button } from '../common/Button';
 
@@ -23,7 +24,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
       {/* Image Preview Box */}
       <div className="relative w-full h-56 flex items-center justify-center p-3 rounded-xl bg-slate-950/80 overflow-hidden mb-4 group-hover:scale-[1.03] transition-transform">
         <img
-          src={product.mockups.front}
+          src={getAssetUrl(product.mockups.front)}
           alt={product.name}
           className="max-h-full max-w-full object-contain filter drop-shadow-xl"
         />

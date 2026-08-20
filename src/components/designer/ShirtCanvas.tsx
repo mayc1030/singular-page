@@ -3,6 +3,7 @@ import * as fabric from 'fabric';
 import type { Product } from '../../types/product';
 import type { PrintSide } from '../../types/order';
 import { CANVAS_WIDTH, CANVAS_HEIGHT } from '../../constants/canvas';
+import { getAssetUrl } from '../../utils/imageUtils';
 
 export interface ShirtCanvasHandle {
   getCompositeDataUrl: (multiplier?: number) => string | null;
@@ -34,7 +35,8 @@ export const ShirtCanvas = forwardRef<ShirtCanvasHandle, ShirtCanvasProps>(({
   const fabricCanvasRef = useRef<fabric.Canvas | null>(null);
 
   const printZone = product.printZones.find((z) => z.id === activeSide) || product.printZones[0];
-  const photoUrl = activeSide === 'front' ? product.mockups.front : product.mockups.back;
+  const rawPhotoUrl = activeSide === 'front' ? product.mockups.front : product.mockups.back;
+  const photoUrl = getAssetUrl(rawPhotoUrl);
 
   const canvasWidth  = CANVAS_WIDTH;
   const canvasHeight = CANVAS_HEIGHT;

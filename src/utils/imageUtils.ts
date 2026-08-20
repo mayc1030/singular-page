@@ -8,6 +8,32 @@ export const readFileAsDataURL = (file: File): Promise<string> => {
 };
 
 /**
+ * Universal asset URL resolver for Vite development, production and GitHub Pages
+ */
+export const getAssetUrl = (path: string): string => {
+  if (!path) return '';
+  if (
+    path.startsWith('data:') ||
+    path.startsWith('blob:') ||
+    path.startsWith('http://') ||
+    path.startsWith('https://')
+  ) {
+    return path;
+  }
+  // Strip leading ./ or /
+  const cleanPath = path.replace(/^\.?\//, '');
+  
+  // In dev mode, always serve from absolute root /
+  if (import.meta.env.DEV) {
+    return `/${cleanPath}`;
+  }
+
+  const base = import.meta.env.BASE_URL || '/';
+  const cleanBase = base.endsWith('/') ? base : `${base}/`;
+  return `${cleanBase}${cleanPath}`;
+};
+
+/**
  * Handles SVG template color replacement or returns direct image URLs (PNG/JPG) safely
  */
 export const applyColorToSvgTemplate = (templateString: string, hexColor: string): string => {
@@ -23,7 +49,7 @@ export const applyColorToSvgTemplate = (templateString: string, hexColor: string
     templateString.startsWith('/') ||
     templateString.startsWith('./')
   ) {
-    return templateString;
+    return getAssetUrl(templateString);
   }
 
   try {

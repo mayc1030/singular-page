@@ -7,6 +7,7 @@ import { DESIGNS } from '../data/designs';
 import { PRINT_TECHNIQUES } from '../data/techniques';
 import { ProductCard } from '../components/catalog/ProductCard';
 import { GalleryCard } from '../components/gallery/GalleryCard';
+import { getAssetUrl } from '../utils/imageUtils';
 
 export const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -322,7 +323,7 @@ export const Home: React.FC = () => {
                       }`}
                     >
                       <img
-                        src={p.mockups.front}
+                        src={getAssetUrl(p.mockups.front)}
                         alt={p.name}
                         className="max-h-full max-w-full object-contain filter drop-shadow-2xl transition-transform duration-700 group-hover:scale-105"
                       />

@@ -11,8 +11,8 @@ export const PRODUCTS: Product[] = [
     popular: true,
     tag: 'Más vendida',
     mockups: {
-      front: './mockups/tshirt-front.png',
-      back: './mockups/tshirt-back.png'
+      front: 'mockups/tshirt-front.png',
+      back: 'mockups/tshirt-back.png'
     },
     availableColors: COLOR_PALETTE,
     availableSizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
@@ -43,8 +43,8 @@ export const PRODUCTS: Product[] = [
     popular: true,
     tag: 'Calidad Premium',
     mockups: {
-      front: './mockups/tshirt-front.png',
-      back: './mockups/tshirt-back.png'
+      front: 'mockups/tshirt-front.png',
+      back: 'mockups/tshirt-back.png'
     },
     availableColors: COLOR_PALETTE,
     availableSizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
@@ -73,8 +73,8 @@ export const PRODUCTS: Product[] = [
     category: 'polo',
     basePrice: 52000,
     mockups: {
-      front: './mockups/polo-front.png',
-      back: './mockups/polo-back.png'
+      front: 'mockups/polo-front.png',
+      back: 'mockups/polo-back.png'
     },
     availableColors: COLOR_PALETTE,
     availableSizes: ['S', 'M', 'L', 'XL', 'XXL'],
@@ -105,8 +105,8 @@ export const PRODUCTS: Product[] = [
     popular: true,
     tag: 'Invierno / Trendy',
     mockups: {
-      front: './mockups/hoodie-front.png',
-      back: './mockups/hoodie-back.png'
+      front: 'mockups/hoodie-front.png',
+      back: 'mockups/hoodie-back.png'
     },
     availableColors: COLOR_PALETTE,
     availableSizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
@@ -135,8 +135,8 @@ export const PRODUCTS: Product[] = [
     category: 'longsleeve',
     basePrice: 42000,
     mockups: {
-      front: './mockups/longsleeve-front.png',
-      back: './mockups/longsleeve-back.png'
+      front: 'mockups/longsleeve-front.png',
+      back: 'mockups/longsleeve-back.png'
     },
     availableColors: COLOR_PALETTE,
     availableSizes: ['S', 'M', 'L', 'XL', 'XXL'],
@@ -165,8 +165,8 @@ export const PRODUCTS: Product[] = [
     category: 'sweatshirt',
     basePrice: 68000,
     mockups: {
-      front: './mockups/sweatshirt-front.png',
-      back: './mockups/sweatshirt-back.png'
+      front: 'mockups/sweatshirt-front.png',
+      back: 'mockups/sweatshirt-back.png'
     },
     availableColors: COLOR_PALETTE,
     availableSizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
